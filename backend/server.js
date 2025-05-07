@@ -101,11 +101,9 @@ app.post("/data", async (req, res) => {
 });
 
 app.post("/user", async (req, res) => {
-  // Log the received data to the console
   console.log("Received data:", req.body);
   await createUser(req.body.username, req.body.uid);
 
-  // Send a response back to the client
   res.status(200).json({ message: "User added successfully!" });
 });
 
